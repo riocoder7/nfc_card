@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "first_iso_app",
+    "name": "Rio coder",
     "slug": "first_iso_app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/logo.png",
     "scheme": "firstisoapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
