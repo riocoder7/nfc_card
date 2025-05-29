@@ -36,7 +36,8 @@ export default function App() {
           </Text>
 
           <TouchableOpacity onPress={() => {
-              router.push('/(tabs)/NfcScreen');
+              router.push('./auth/signup');
+
               }} 
               style={styles.button}>
             
