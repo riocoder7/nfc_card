@@ -1,5 +1,8 @@
+
+import { useRouter } from 'expo-router';
 import React from 'react';
 import {
+
   View,
   Text,
   StyleSheet,
@@ -10,6 +13,7 @@ import {
 } from 'react-native';
 
 export default function App() {
+  const router = useRouter();
   return (
     <ImageBackground
       source={require('../assets/images/nature.jpg')}
@@ -31,9 +35,14 @@ export default function App() {
             Step into a world where nature welcomes you with open arms. Whether you’re looking to hike, relax, or explore the unseen, we help you connect with the earth in its purest form.
           </Text>
 
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Get Started</Text>
-          </TouchableOpacity>
+          <TouchableOpacity onPress={() => {
+              router.push('/(tabs)/NfcScreen');
+              }} 
+              style={styles.button}>
+            
+              <Text style={styles.buttonText}>Get Started</Text>
+            </TouchableOpacity>
+          
 
           <Text style={styles.secondaryText}>
             No sign-up needed. Jump in and start exploring.

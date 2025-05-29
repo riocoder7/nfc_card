@@ -9,14 +9,26 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.mynfcapp",
+      "infoPlist": {
+        "NFCReaderUsageDescription": "Allow Rio Coder to interact with nearby NFC devices to read and write data."
+      }
     },
     "android": {
+       "permissions": ["android.permission.NFC"],
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "intentFilters": [],
+      "config": {
+        "googleMaps": {
+          "apiKey": "YOUR_GOOGLE_MAPS_API_KEY_IF_USED"
+        }
+      },
+      "package": "com.yourcompany.mynfcapp"
     },
     "web": {
       "bundler": "metro",
@@ -25,6 +37,12 @@
     },
     "plugins": [
       "expo-router",
+      [
+        "react-native-nfc-manager",
+        {
+          "nfcPermission": "Allow Rio Coder to use NFC to scan and write to tags."
+        }
+      ],
       [
         "expo-splash-screen",
         {
